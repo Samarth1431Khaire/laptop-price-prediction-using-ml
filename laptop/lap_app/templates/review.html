@@ -1,0 +1,56 @@
+<html>
+   <head>
+       <style>
+         h1{           
+           color:#FBF8BE;
+            }
+         h2{
+           background-color:#FF69B4;
+           color:#00FFFF;
+          }
+
+
+
+       *{font-size:30px;}
+
+       body{
+           background-image:url({{url_for('static', filename='bulitin/tuv.jpg')}});
+           background-size:cover;
+           
+         }
+         
+
+         .btn{border-radius:30px;
+          color:#00FFFF;
+          background-color:#FF69B4;}
+          a{
+           color:lightgreen;
+          }
+       </style>
+   </head>
+   <body>
+         <center>
+
+      <h2> Best Laptop For Yourself </h2>
+        <a href="{{url_for("home")}}">Back</a>
+      <h1> Review In Hindi </h1>
+               <iframe width="420" height="315"
+src="https://www.youtube.com/embed/XADAYYCnp4w">
+</iframe>
+            <br/><br/>
+     <h1> Review In English </h1>
+                        <iframe width="420" height="315"
+src="https://www.youtube.com/embed/bMDSikB6ooE">
+</iframe>
+           <br/><br/>
+     <h1> Review In Marathi </h1>
+                        <iframe width="420" height="315"
+src="https://www.youtube.com/embed/NjApMdtaSk8">
+</iframe>
+
+
+
+         </center>
+        
+   </body>
+</html>

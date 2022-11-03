@@ -1,0 +1,155 @@
+<html>
+<head>
+<title> Laptop Price Prediction </title>
+<style>
+       *{font-size:30px;}
+       body{
+           background-image:url({{url_for('static', filename='bulitin/car1.jpg')}});
+           background-size:cover;
+           color:#FBF8BE;
+           
+         }
+         h1{
+           
+           color:#FBF8BE;
+            }
+         .btn{border-radius:30px;
+          color:#00FFFF;
+          background-color:#FF69B4;}
+         
+          .nav{
+            background-color:#FF69B4;
+            
+            }
+
+          .nav a{
+            color:#00FFFF;
+            text-decoration: None;
+            padding:50px;
+           }
+</style>
+</head>
+<center>
+<body>
+   <center>
+           <div class="nav">
+          
+     <a href="/contact">Contact Us</a>
+     <a href="/about">About us</a>
+     <a href="/review">Reviews</a>
+     
+     
+         
+             
+             </div>
+         </center>
+
+
+<h1  style = "font-size:40px;"> Laptop Price Prediction </h1>
+</center>
+
+<center class = "k">
+
+
+
+
+
+
+
+<form method = "POST">
+	{% with messages = get_flashed_messages() %}  
+		{% if messages %}  
+			{% for message in messages %}  
+				<p>{{ message }}</p>  
+			{% endfor %}  
+		{% endif %}  
+	{% endwith %}  
+<input type = "number"  name = "size" placeholder = "Screen Size (inches)"  min="10"  max="19"  step="any"  required />
+<br/><br/>
+<input type = "number"  name = "storage" placeholder = "Size of Hard Disk (GB)"  min = "8"  max = "2560" step = "any"   required />
+<br/><br/>
+<input type = "number"  name = "wt" placeholder = "Weight of laptop (Kg)"  min = "0.69"  max = "5" step = "any"  required />
+<br/><br/>
+Select Name of Laptop Company 
+<br/>
+<select name = "company" class ="a" >
+<option value = "1">Acer</option>
+<option value = "2">Apple</option>
+<option value = "3">Asus</option>
+<option value = "4">Chuwi</option>
+<option value = "5">Dell</option>
+<option value = "6">Fujitsu</option>
+<option value = "7">Google</option>
+<option value = "8">Hp</option>
+<option value = "9">Huawei</option>
+<option value = "10">Lenovo</option>
+<option value = "11">LG</option>
+<option value = "12">Mediacon</option>
+<option value = "13">Microsoft</option>
+<option value = "14">MSI</option>
+<option value = "15">Razer</option>
+<option value = "16">Samsung</option>
+<option value = "17">Toshiba</option>
+<option value = "18">Vero</option>
+<option value = "19">Xiaomi</option>
+</select>
+<br/><br/>
+	
+select TypeName for Laptop
+<br/>
+<select name = "TypeName" class="a">
+<option value = "1">2 in1 convertible </option>
+<option value = "2"> Gaming </option>
+<option value = "3"> Netbook </option>
+<option value = "4"> Notebook  </option>
+<option value = "5"> Ultrabook </option>
+<option value = "6"> Workstation </option>
+</select>
+<br/><br/>
+
+select Ram of  Laptop
+<br/>
+<select name="Ram" class="a" >
+<option value = "1"> 12 GB </option>
+<option value = "2"> 16 GB </option>
+<option value = "3"> 24 GB </option>
+<option value = "4"> 2 GB </option>
+<option value = "5"> 32 GB </option>
+<option value = "6"> 4 GB </option>
+<option value = "7"> 64 GB </option>
+<option value = "8"> 6 GB </option>
+<option value = "9"> 8 GB </option>
+</select>
+<br/><br/>
+
+
+select Oprating System for Laptop
+<br/>
+<select name = "OpSys" class="a">
+<option value = "1"> Android </option>
+<option value = "2"> Chrome OS </option>
+<option value = "3"> Linux   </option>
+<option value = "4"> Mac OSX </option>
+<option value = "5"> Mac OS </option>
+<option value = "6"> NO OS </option>
+<option value = "7"> Windows 10 </option>
+<option value = "8"> Windows 10S </option>
+<option value = "9"> Windows 7 </option>
+
+</select>
+<br/><br/>
+
+<input type = "submit"  name = "action" class= "btn"  value = "Find Price" /> 
+</form>
+
+<form method = "POST">
+
+<input type ="submit"  name = "action" class = "btn" value = "logout" style="position:absolute; top:80px; right:80px" />
+
+
+</form>
+{{ msg  }}
+</center>
+</body>
+
+</html>
